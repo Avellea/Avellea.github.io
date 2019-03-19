@@ -13,4 +13,4 @@ https://i.imgur.com/64b8yAG.gifv
 
 Hopefully that image worked, it's a short gif of the current menuy. Not dont yet, and the textures are slightly broken, but it'll do.
 
-You can find the release page at ![this link.](https://dynamicdonkey.github.io/RPG-Game/index.html)
+You can find the release page at [this link.](https://dynamicdonkey.github.io/RPG-Game/index.html)
