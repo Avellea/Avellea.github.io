@@ -55,7 +55,7 @@ li:first-child {
 
 img {
     border: 2px solid #313131;
-    height: auto;
+    /* height: auto; */
     object-fit: cover;
     object-position: 50% 100%;
     width: 8em;
