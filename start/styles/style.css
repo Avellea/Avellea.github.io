@@ -62,7 +62,7 @@ img {
 }
 
 input {
-    height: inherit;
+    /* height: inherit; */
     width: 95%;
     background: #2e2e2e;
     color: #9e9e9e;
