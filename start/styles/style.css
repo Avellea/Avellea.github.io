@@ -1,3 +1,5 @@
+
+
 html {
     align-items: center;
     display: flex;
@@ -89,7 +91,7 @@ input:focus {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-@media only screen and (min-device-width : 1023px) and (max-device-width : 1025px) {
+@media only screen and (min-device-width : 1023px) and (max-device-width : 1025px) and (-webkit-min-device-pixel-ratio: 2) {
     img {
         display: none;
     }
