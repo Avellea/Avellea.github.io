@@ -89,7 +89,7 @@ input:focus {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-@media only screen and (min-device-width : 2047px) and (max-device-width : 2049px) and (orientation : landscape) {
+@media only screen and (min-device-width : 2047px) and (max-device-width : 2049px) {
     img {
         display: none;
     }
