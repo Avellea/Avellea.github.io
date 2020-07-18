@@ -1,18 +1,56 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Avellea</title>
+        <link rel="shortcut icon" href="images/Logo.png">
+        <link rel="stylesheet" type="text/css" href="styles/stylesheet.css"/>
+    </head>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+    <body>
+        <div id="header" class="header">
+            <div class="logodiv">
+                <a href="index.html"><img class="logo" src="images/HeaderLogo.svg" /></a>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                <div class="filter">
+                    <a href="index.html">HOME</a>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+                    <span class="footdogs">/</span>
+                    <a href="about.html">ABOUT</a>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+                    <span class="footdogs">/</span>
+                    <a href="cydia.html">CYDIA</a>
+
+                    <span class="footdogs">/</span>
+                    <a href="start/index.html">START</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="page">
+            <div id="content">
+                <div id="list">
+                    <ul>
+
+                        <li>
+                            <span class="notification"><span>[!!]</span><span>WEBSITE UNDER DEVELOPMENT - STAND BY</span></span>
+                        </li>
+
+                        <li>
+                            <a href="posts/firstpost.html">
+                                <span class="tag">[WE]</span><span>FIST POST</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="posts/template.html">
+                                <span class="tag">[TE]</span><span>TEMPLATE POST</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
