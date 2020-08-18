@@ -51,6 +51,15 @@ img {
     max-width: 900px;
     margin-bottom: 20px;
 }
+
+code {
+    max-width: 900px;
+    background: #0f0f0f;
+    padding: 20px;
+    margin:10px 0 30px 0;
+    display: block;
+}
+
 #page {
     max-width: 900px;
     margin: auto;
@@ -159,7 +168,7 @@ img {
 }
 .code {
     max-width: 900px;
-    background: #1f1f1f;
+    background: #0f0f0f;
     padding: 20px;
     margin:10px 0 30px 0;
     display:inline-block;
