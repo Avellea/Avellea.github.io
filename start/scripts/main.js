@@ -9,7 +9,7 @@ function initSearchBar() {
     document.getElementById("search-bar-input").addEventListener("keypress", (event) => {
         if (event.key != 'Enter') return
 
-        googleSearchUrl = "https://duckduckgo.com/?q="
+        googleSearchUrl = "http://kozel-net.local/searx/?q="
         query = document.getElementById("search-bar-input").value.replace(/\ /g, "+")
         document.location = googleSearchUrl + query
     })
