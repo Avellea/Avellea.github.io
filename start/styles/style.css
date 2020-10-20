@@ -34,7 +34,8 @@ a {
 }
 
 a:focus, a:hover {
-    color: #1d81b2;
+    /*color: #1d81b2;*/
+    color: #ff2929
 }
 
 nav {
@@ -54,7 +55,8 @@ ul {
 }
 
 li:first-child {
-    color: #1d81b2;
+    /*color: #1d81b2;*/
+    color: #ff2929;
     font-weight: bold;
     line-height: 2em;
 }
