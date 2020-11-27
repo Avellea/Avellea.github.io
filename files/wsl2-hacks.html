@@ -1,0 +1,124 @@
+<h1 id="wsl2-hacks">wsl2-hacks</h1>
+<p>Useful snippets / tools for using WSL2 as a development environment</p>
+<hr>
+<p><strong>Auto-start/services</strong> (<code>systemd</code> and <code>snap</code> support)</p>
+<p>I&#39;ve done a few methods that have had various levels of success. My goal was to make it feel seamless for my workflow and have commands work as expected. What&#39;s below is the current version of the setup I use. It allows me to use the MS Terminal as well as VSCode&#39;s Remote WSL plugin.</p>
+<p>With this setup your shells will be able to run <code>systemctl</code> commands, have auto-starting services, as well as be able to run <a href="https://tutorials.ubuntu.com/tutorial/basic-snap-usage">snaps</a>.</p>
+<ol>
+    <li>
+        <p>Install deps</p>
+        <pre><code class="lang-shell"> <span class="hljs-variable">$ </span>sudo apt update
+ <span class="hljs-variable">$ </span>sudo apt install dbus policykit-<span class="hljs-number">1</span> daemonize
+</code></pre>
+    </li>
+    <li>
+        <p>Create a fake-<code>bash</code></p>
+        <p> This fake shell will intercept calls to <code>wsl.exe bash ...</code> and forward them to a real bash running in the right environment for <code>systemd</code>. If this sounds like a hack-- well, it is. However, I&#39;ve tested various workflows and use this daily. That being said, your mileage may vary.</p>
+        <pre><code> $ sudo touch <span class="hljs-meta-keyword">/usr/</span>bin/bash
+ $ sudo chmod +x <span class="hljs-meta-keyword">/usr/</span>bin/bash
+ $ sudo editor <span class="hljs-meta-keyword">/usr/</span>bin/bash
+</code></pre>
+        <p> Add the following, be sure to replace <code>&lt;YOURUSER&gt;</code> with your WSL2 Linux username</p>
+        <pre><code class="lang-sh"> <span class="hljs-comment">#!/bin/bash</span>
+ <span class="hljs-comment"># your WSL2 username</span>
+ UNAME=<span class="hljs-string">"&lt;YOURUSER&gt;"</span>
+
+ UUID=$(id -u <span class="hljs-string">"<span class="hljs-variable">${UNAME}</span>"</span>)
+ UGID=$(id -g <span class="hljs-string">"<span class="hljs-variable">${UNAME}</span>"</span>)
+ UHOME=$(getent passwd <span class="hljs-string">"<span class="hljs-variable">${UNAME}</span>"</span> | cut <span class="hljs-_">-d</span>: <span class="hljs-_">-f</span>6)
+ USHELL=$(getent passwd <span class="hljs-string">"<span class="hljs-variable">${UNAME}</span>"</span> | cut <span class="hljs-_">-d</span>: <span class="hljs-_">-f</span>7)
+
+ <span class="hljs-keyword">if</span> [[ <span class="hljs-string">"<span class="hljs-variable">${PWD}</span>"</span> = <span class="hljs-string">"/root"</span> ]]; <span class="hljs-keyword">then</span>
+     <span class="hljs-built_in">cd</span> <span class="hljs-string">"<span class="hljs-variable">${UHOME}</span>"</span>
+ <span class="hljs-keyword">fi</span>
+
+ <span class="hljs-comment"># get pid of systemd</span>
+ SYSTEMD_PID=$(pgrep -xo systemd)
+
+ <span class="hljs-comment"># if we're already in the systemd environment</span>
+ <span class="hljs-keyword">if</span> [[ <span class="hljs-string">"<span class="hljs-variable">${SYSTEMD_PID}</span>"</span> <span class="hljs-_">-eq</span> <span class="hljs-string">"1"</span> ]]; <span class="hljs-keyword">then</span>
+     <span class="hljs-built_in">exec</span> <span class="hljs-string">"<span class="hljs-variable">${USHELL}</span>"</span> <span class="hljs-string">"<span class="hljs-variable">$@</span>"</span>
+ <span class="hljs-keyword">fi</span>
+
+ <span class="hljs-comment"># start systemd if not started</span>
+ /usr/sbin/daemonize <span class="hljs-_">-l</span> <span class="hljs-string">"<span class="hljs-variable">${HOME}</span>/.systemd.lock"</span> /usr/bin/unshare -fp --mount-proc /lib/systemd/systemd 2&gt;/dev/null
+ <span class="hljs-comment"># wait for systemd to start</span>
+ <span class="hljs-keyword">while</span> [[ <span class="hljs-string">"<span class="hljs-variable">${SYSTEMD_PID}</span>"</span> = <span class="hljs-string">""</span> ]]; <span class="hljs-keyword">do</span>
+     sleep 0.05
+     SYSTEMD_PID=$(pgrep -xo systemd)
+ <span class="hljs-keyword">done</span>
+ <span class="hljs-comment"># enter systemd namespace</span>
+ <span class="hljs-built_in">exec</span> /usr/bin/nsenter -t <span class="hljs-string">"<span class="hljs-variable">$(pgrep -xo systemd)</span>"</span> -m -p --wd=<span class="hljs-string">"<span class="hljs-variable">${PWD}</span>"</span> /sbin/runuser <span class="hljs-_">-s</span> <span class="hljs-string">"<span class="hljs-variable">${USHELL}</span>"</span> <span class="hljs-string">"<span class="hljs-variable">${UNAME}</span>"</span> -- <span class="hljs-string">"<span class="hljs-variable">${@}</span>"</span>
+</code></pre>
+    </li>
+    <li>
+        <p>Set the fake-<code>bash</code> as our <code>root</code> user&#39;s shell</p>
+        <p> We need <code>root</code> level permission to get <code>systemd</code> setup and enter the environment. The way I went about solving this is to have WSL2 default to the <code>root</code> user and when <code>wsl.exe</code> is executed the fake-<code>bash</code> will do the right thing.</p>
+        <p> The next step in getting this working is to change the default shell for our <code>root</code> user.</p>
+        <p> Edit the <code>/etc/passwd</code> file:</p>
+        <p> <code>$ sudo editor /etc/passwd</code></p>
+        <p> Find the line starting with <code>root:</code>, it should be the first line. Change it to:</p>
+        <p> <code>root:x:0:0:root:/root:/usr/bin/bash</code></p>
+        <p> <em>Note the <code>/usr/bin/bash</code> here, slight difference</em></p>
+        <p> Save and close this file.</p>
+    </li>
+    <li>
+        <p>Exit out of / close the WSL2 shell</p>
+        <p> The next step is to shutdown WSL2 and to change the default user to <code>root</code>.</p>
+        <p> In a PowerShell terminal run:</p>
+        <pre><code> &gt; wsl --<span class="hljs-built_in">shutdown</span>
+ &gt; ubuntu1804.exe <span class="hljs-built_in">config</span> --<span class="hljs-built_in">default</span>-user root
+</code></pre></li>
+    <li>
+        <p>Re-open WSL2</p>
+        <p> Everything should be in place. Fire up WSL via the MS Terminal or just <code>wsl.exe</code>. You should be logged in as your normal user and <code>systemd</code> should be running</p>
+        <p> You can test by running the following in WSL2:</p>
+        <pre><code class="lang-sh"> $ systemctl <span class="hljs-keyword">is</span>-active dbus
+ active
+</code></pre>
+    </li>
+    <li>
+        <p>Create <code>/etc/rc.local</code> (optional)</p>
+        <p> If you want to run certain commands when the WSL2 VM starts up, this is a useful file that&#39;s automatically ran by systemd.</p>
+        <pre><code class="lang-shell"> $ sudo touch /etc/rc<span class="hljs-selector-class">.local</span>
+ $ sudo chmod +x /etc/rc<span class="hljs-selector-class">.local</span>
+ $ sudo editor /etc/rc.local
+</code></pre>
+        <p> Add the following:</p>
+        <pre><code class="lang-sh"> <span class="hljs-comment">#!/bin/sh -e</span>
+
+ <span class="hljs-comment"># your commands here...</span>
+
+ <span class="hljs-keyword">exit</span> <span class="hljs-number">0</span>
+</code></pre>
+    </li>
+</ol>
+<p><code>/etc/rc.local</code> is only run on &quot;boot&quot;, so only when you first access WSL2 (or it&#39;s shutdown due to inactivity/no-processes). To test you can shutdown WSL via PowerShell/CMD <code>wsl --shutdown</code> then start it back up with <code>wsl</code>.</p>
+<hr>
+<p><strong>Access localhost ports from Windows</strong></p>
+<p>Many development servers default to binding to <code>127.0.0.1</code> or <code>localhost</code>. It can be cumbersome and frustrating to get it to bind to <code>0.0.0.0</code> to make it accessible via Windows using the IP of the WSL2 VM.</p>
+<blockquote>
+    <p>Take a look at <a href="https://github.com/shayne/go-wsl2-host">https://github.com/shayne/go-wsl2-host</a> to have <code>wsl.local</code> automatically resolve to the WSL2 VM</p>
+</blockquote>
+<p>To make these dev servers / ports accessible you can run the following commands, or add them to the <code>/etc/rc.local</code> if you have <code>systemd</code> running:</p>
+<pre><code class="lang-shell"># /etc/rc.local runs <span class="hljs-keyword">as</span> root <span class="hljs-keyword">by</span> <span class="hljs-keyword">default</span>
+# <span class="hljs-keyword">if</span> you run these yourself <span class="hljs-keyword">add</span> <span class="hljs-string">'sudo'</span> <span class="hljs-keyword">to</span> the beginning <span class="hljs-keyword">of</span> <span class="hljs-keyword">each</span> command
+
+$ sysctl -w net.ipv4.conf.all.route_localnet=<span class="hljs-number">1</span>
+$ iptables -t nat -I PREROUTING -p tcp -j DNAT --<span class="hljs-keyword">to</span>-destination <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>
+</code></pre>
+<hr>
+<p><strong>Increase <code>max_user_watches</code></strong></p>
+<p>If devtools are watching for file changes, the default is too low.</p>
+<pre><code># /etc/rc.local runs <span class="hljs-keyword">as</span> root <span class="hljs-keyword">by</span> <span class="hljs-keyword">default</span>
+# <span class="hljs-keyword">if</span> you run these yourself <span class="hljs-keyword">add</span> <span class="hljs-string">'sudo'</span> <span class="hljs-keyword">to</span> the beginning <span class="hljs-keyword">of</span> <span class="hljs-keyword">each</span> command
+
+sysctl -w fs.inotify.max_user_watches=<span class="hljs-number">524288</span>
+</code></pre>
+<hr>
+<p><strong>Open MS Terminal to home directory by default</strong></p>
+<p>Open your MS Terminal configuration <kbd>Ctrl+,</kbd></p>
+<p>Find the <code>&quot;commandLine&quot;:...</code> config for the WSL profile.</p>
+<p>Change to something like:</p>
+<pre><code class="lang-json"><span class="hljs-string">"commandline"</span>: <span class="hljs-string">"wsl.exe ~ -d Ubuntu-18.04"</span>,
+</code></pre>
