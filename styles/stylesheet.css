@@ -1,21 +1,8 @@
-
-/* @font-face {
-    font-family: 'Share Tech Mono';
-    src: url('https://n-o-d-e.live/fonts/font.eot');
-    src: local('â˜º'), url('https://n-o-d-e.live/fonts/font.woff') format('woff'), url('https://n-o-d-e.live/fonts/font.ttf') format('truetype'), url('https://n-o-d-e.live/fonts/font.svg') format('svg');
-} */
-
-@font-face {
-    font-family: 'Share Tech Mono';
-    src: url('font.eot');
-    src: local('â˜º'), url('font.woff') format('woff'), url('font.ttf') format('truetype');
-}
-
 body {
     letter-spacing: 0.1px;
     padding: 0;
     margin: 0;
-    font-family: 'Share Tech Mono', Monospace, Courier;
+    font-family: 'Source Code Pro', monospace;
     font-weight: 400;
     font-size: 17px;
     color: #c8c8c8;
@@ -25,6 +12,15 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+blockquote {
+    max-width: 900px;
+    background: #0f0f0f;
+    padding: 20px;
+    margin:10px 0 30px 0;
+    display: block;
+}
+
 pre {
     padding: 0;
     margin: 0 0 50px 0;
@@ -37,7 +33,7 @@ span {
     margin: 0 10px 0 0;
 }
 li {
-    margin: 15px 0;
+    margin: 5px 0;
     padding: 0;
     list-style: none;
 }
@@ -144,6 +140,12 @@ code {
     color: #222;
     background: #fff;
 }
+
+.inline-code {
+    color: #fff;
+    background: #0f0f0f;
+}
+
 .important {
     margin-left: -18px;
 }
@@ -163,6 +165,7 @@ code {
     display: inline-block;
     margin: 20px 0;
     color: #FFF;
+    font-weight: bold;
 }
 .subtitle2 {
     display: inline-block;
