@@ -36,9 +36,3 @@ a:hover {
 .about-img {
     max-width: 500%;
 }
-
-.center-card {
-    margin-left: auto;
-    margin-right: auto;
-    width: 20rem;
-}
