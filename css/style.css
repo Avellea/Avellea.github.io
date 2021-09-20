@@ -1,0 +1,44 @@
+#intro {
+    background-image: url('../img/hero2.jpg');
+    height: 400px;
+}
+
+@media (min-width: 576px) {
+    #intro {
+        height: 600px;
+    }
+}
+
+body {
+    background-color: #eee;
+}
+
+.divider {
+    background-color: #eee;
+}
+
+.avatar {
+    width: 196px;
+    height: 196px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+
+.about-img {
+    max-width: 500%;
+}
+
+.center-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem;
+}

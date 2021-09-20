@@ -1,63 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Avellea</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-    <head>
-        <title>Avellea</title>
-        <link rel="shortcut icon" type="image/png" href="images/Logo.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">  
-        <link rel="stylesheet" type="text/css" href="../styles/stylesheet.css" media="screen"/>
 
-        <meta property="og:title" content="dynamicdonkey.github.io" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dynamicdonkey.github.io" />
-        <meta property="og:image" content="https://dynamicdonkey.github.io/images/logo2.jpg" />
-        <meta property="og:description" content="AvelleaGames Blog" />
-        <meta name="theme-color" content="#892CA0">
-        <meta name="twitter:card" content="summary_large_image">
-    </head>
-    
-    <body>
-        <div id="header" class="header">
-            <div class="logodiv">
-                <a href="index.html"><img class="logo" src="images/HeaderLogo.svg" /></a>
+  <body>
 
-                <div class="filter">
-                    <a href="index.html">HOME</a>
-
-                    <span class="footdogs">/</span>
-                    <a href="about.html">ABOUT</a>
-
-                </div>
-            </div>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-black navbar-dark ">
+        <!-- Container wrapper -->
+        <div class="container">
+        
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+        
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+              <!-- Link -->
+              <li class="nav-item">
+                <a class="nav-link" href="#about" style="color: #fff;">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects" style="color: #fff;">Projects</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#" style="color: #fff;">Media</a>
+              </li> -->
+            
+            </ul>
+          
+          </div>
         </div>
-
-        <div id="page">
-            <div id="content">
-                <div id="list">
-                    <ul>
-
-                        <li>
-                            <span class="notification"><span>[!!]</span><span>WEBSITE UNDER DEVELOPMENT - STAND BY</span></span>
-                        </li>
-
-                        <li>
-                            <a href="posts/mayuko.html">
-                                <span class="tag">[DC]</span><span>MAYUKO BOT</span>
-                            </a>
-                        </li>
-
-                        <!-- <li>
-                            <a href="posts/template.html">
-                                <span class="tag">[TE]</span><span>TEMPLATE POST</span>
-                            </a>
-                        </li> -->
-
-                    </ul>
-                </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar -->
+      <!-- Background image -->
+      <div class="p-5 text-center bg-image" id="intro">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <img alt="me" class="avatar" src="https://www.gravatar.com/avatar/7e9384c45fca22ccdfacdf0730c9e35d?s=512">
+              <br><br>
+              <h1 class="mb-3">Avellea</h1>
+              <h4 class="mb-3">I make useless stuff and it works.</h4>
+              <br>
+              <!-- <a class="btn btn-outline-light btn-lg" href="#main" role="button">Learn more</a> -->
             </div>
+          </div>
         </div>
+      </div>
+      <!-- Background image -->
+    </header>
 
-    </body>
+    <main>
+      <div class="container-fluid">
+        <section class="divider mt-5">
+          <div class="row justify-content-center align-items-center">
+             <div class="col-md-4 text-right pr-5">
+               <h2 id="about">About me</h2>
+             </div>
+             <div class="col-md-4">
+               <p>
+                 There's nothing particularly interesting about me.
+                 <br><br>
+                 I'm a hobbyist programmer, and sometimes design projects that I find interesting or for my own use. I do most open source work in my free time.
+                 <br></br>
+                 Currently, I'm working on some projects, which are listed below. I have another project under wraps involving some web dev and topics surrounding that. Stay tuned!
+               </p>
+             </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <div class="container align-items-center">
+            <div class="divider mt-5">
+              <div class="row justify-content-center align-items-center text-center">
+                <h2>Projects<br><br></h2>
+            </div>
+            
+            <div class="row text-center">
+              <div class="col-sm-3 align-items-center">
+                <div class="card center-card">
+                  <img
+                    src="./img/mayuko.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Mayuko</h5>
+                    <p class="card-text">
+                      NodeJS Discord bot for all things anime!<br><br>
+                    </p>
+                    <a href="https://github.com/MayukoBot/mayuko-js" class="btn btn-primary">GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-3 align-items-center">
+                <div class="card center-card">
+                  <img
+                    src="./img/soon.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Coming soon!</h5>
+                    <p class="card-text">
+                      Check back soon for a new project! <br><br><br>
+                    </p>
+                    <a href="#!" class="btn btn-disabled">GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-3 align-items-center">
+                <div class="card center-card">
+                  <img
+                    src="./img/soon.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Coming soon!</h5>
+                    <p class="card-text">
+                      Check back soon for a new project! <br><br><br>
+                    </p>
+                    <a href="#!" class="btn btn-disabled">GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-3 align-items-center">
+                <div class="card center-card">
+                  <img
+                    src="./img/github.jpg"
+                    class="card-img-top"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">See More</h5>
+                    <p class="card-text">
+                      See more of the projects I've built on GitHub by clicking the button below.<br><br>
+                    </p>
+                    <a href="https://github.com/Avellea" class="btn btn-primary">GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <br><br>
+        </section>
+      </div>
+    </main>
+
+
+    <footer class="bg-light text-center text-lg-start">    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgb(0,0,0); color: #fff;">
+        あなたはかわいいです
+        <br>
+        © 2020 Copyright
+        <a class="text-light" href="https://avellea.github.io/">Avellea</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+  </body>
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
 </html>
+
