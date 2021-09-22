@@ -10,7 +10,7 @@ function displayDate() {
     let cMonth = currentDate.getMonth() + 1;
     let cYear = currentDate.getFullYear();
 
-    let finalString = cDay + " / " + cMonth + " / " + cYear
+    let finalString = cMonth + " / " + cDay + " / " + cYear
 
     console.log(finalString);
 
