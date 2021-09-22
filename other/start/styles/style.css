@@ -13,7 +13,7 @@ h1 {
     font-size: 2em;
     display: block;
     margin: 5;
-    padding: 10px;
+    padding: 0px;
     text-align: center;
     color: #fff;
     /* font: 44px "Courier New", Courier, monospace; */
@@ -95,6 +95,17 @@ input:focus {
 #linkText {
     text-shadow: 0 2px 3px #000000;
     font-weight: bold;
+}
+
+#dateDisplay {
+    font-size: 1.2em;
+    display: block;
+    margin: 5;
+    padding: 0px;
+    text-align: center;
+    color: #aaa;
+    /* font: 44px "Courier New", Courier, monospace; */
+    /* font-weight: bold; */
 }
 
 #link1 {

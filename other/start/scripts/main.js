@@ -1,5 +1,9 @@
 window.onload = function() {
     this.initSearchBar()
+    this.displayDate()
+}
+
+function displayDate() {
 
     let currentDate = new Date();
     let cDay = currentDate.getDate();
@@ -9,6 +13,8 @@ window.onload = function() {
     let finalString = cDay + " / " + cMonth + " / " + cYear
 
     console.log(finalString);
+
+    document.getElementById('dateDisplay').innerHTML = finalString
 }
 
 function initSearchBar() {
