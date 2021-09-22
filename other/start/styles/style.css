@@ -13,23 +13,10 @@ h1 {
     font-size: 2em;
     display: block;
     margin: 5;
-    padding: 0px;
     text-align: center;
     color: #fff;
-    /* font: 44px "Courier New", Courier, monospace; */
     font-weight: bold;
 }
-
-/* #locationPlz {
-    font-size: 2em;
-    display: block;
-    margin: 5;
-    padding: 50px;
-    text-align: center;
-    color: #fff;
-    font: 44px "Courier New", Courier, monospace;
-    font-weight: bold;
-} */
 
 body {
     display: flex;
@@ -44,7 +31,6 @@ a {
 }
 
 a:focus, a:hover {
-    /*color: #1d81b2;*/
     color: #fff;
 }
 
@@ -52,7 +38,6 @@ input {
     height: inherit;
     background: #2e2e2e;
     color: #9e9e9e;
-    /* font: 22px "Courier New", Courier, monospace; */
     font-weight: bold;
     line-height: 2em;
     box-shadow: none;
@@ -75,7 +60,6 @@ input:focus {
 
 .col-sm {
     padding: 1rem;
-    /* background-color: #33b5e5; */
     height: 150px;
     text-align: center;
     border-radius: 6px;
@@ -104,8 +88,6 @@ input:focus {
     padding: 0px;
     text-align: center;
     color: #aaa;
-    /* font: 44px "Courier New", Courier, monospace; */
-    /* font-weight: bold; */
 }
 
 #link1 {
