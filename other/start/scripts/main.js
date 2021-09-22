@@ -1,5 +1,14 @@
 window.onload = function() {
     this.initSearchBar()
+
+    let currentDate = new Date();
+    let cDay = currentDate.getDate();
+    let cMonth = currentDate.getMonth() + 1;
+    let cYear = currentDate.getFullYear();
+
+    let finalString = cDay + " / " + cMonth + " / " + cYear
+
+    console.log(finalString);
 }
 
 function initSearchBar() {

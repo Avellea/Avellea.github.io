@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Avellea</title>
+        <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Personal start page...">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles/style.css">
 
-        <link rel="stylesheet" type="text/css" href="styles/style.css"/>
-        
-        <title>New tab</title>
     </head>
+
     <body>
-        <nav>
-            <h1>こんにちは！</h1>
-            <input id="search-bar-input" placeholder="Search something on DuckDuckGo">
-            <ul>
-                <li>media</li> 
-                <li><a href="https://gogoanime.so/">GogoAnime</a></li>
-                <li><a href="https://www.youtube.com/">YouTube</a></li>
-                <li><a href="https://www.hulu.com/">Hulu</a></li>
-            </ul>
-            <ul>
-                <li>social</li>
-                <li><a href="https://mail.google.com/">GMail</a></li>
-                <li><a href="https://reddit.com/">Reddit</a></li>
-                <li><a href="https://4chan.org/">4chan</a></li>
-            </ul>
-            <ul>
-                <li>news</li>
-                <li><a href="https://fox2now.com/">Local</a></li>
-                <ul><a href="https://www.xda-developers.com/">XDA Dev</a></ul>
-                <ul><a href="https://dev.to/">dev.to</a></ul>
-            </ul>
-            <ul>
-                <li>dev</li>
-                <li><a href="https://docs.godotengine.org/en/stable/">Godot Docs</a></li>
-                <ul><a href="https://github.com">GitHub</a></ul>
-                <ul><a href="https://docs.microsoft.com/en-us/dotnet/csharp/">C# Docs</a></ul>
-            </ul>
-        </nav>
-        <img id="animegirl" src="images/megumin.png" alt="image.png">
-        <div class="footer"> <a href="https://dynamicdonkey.github.io/">© Dynamic Donkey 2020</a> </div>
-        <script src="scripts/main.js"></script>
+        <div class="container-md">
+            <br><br><br><br><br>
+            <div class="row" id="locationPlz">
+                <h1>こんにちは！</h1>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Search something on DuckDuckGo" id="search-bar-input">
+            </div>
+            <br>
+            <div class="row">
+
+                <a href="https://www.xda-developers.com/" rel="noopener noreferrer" class="col-sm m-1" id="link1">
+                    <p id="linkText">XDA Developers</p>
+                </a>
+                <a href="https://www.youtube.com/" rel="noopener noreferrer" class="col-sm m-1" id="link2">
+                    <p id="linkText">YouTube</p>
+                </a>
+                <a href="https://osu.ppy.sh/" rel="noopener noreferrer" class="col-sm m-1" id="link3">
+                    <p id="linkText">osu!</p>
+                </a>
+                <a href="https://www.github.com/" rel="noopener noreferrer" class="col-sm m-1" id="link4">
+                    <p id="linkText">GitHub</p>
+                </a>
+                <a href="https://mail.google.com/" rel="noopener noreferrer" class="col-sm m-1" id="link5">
+                    <p id="linkText">GMail</p>
+                </a>
+
+            </div>
+            <div class="row">
+                <a href="https://9anime.to/" rel="noopener noreferrer" class="col-sm m-1" id="link6">
+                    <p id="linkText">9Anime</p>
+                </a>
+                <a href="https://old.reddit.com/" rel="noopener noreferrer" class="col-sm m-1" id="link7">
+                    <p id="linkText">Reddit</p>
+                </a>
+                <a href="https://discord.com/developers/applications/" rel="noopener noreferrer" class="col-sm m-1" id="link8">
+                    <p id="linkText">Discord Developers</p>
+                </a>
+                <a href="https://fox2now.com/" rel="noopener noreferrer" class="col-sm m-1" id="link9">
+                    <p id="linkText">Local News</p>
+                </a>
+                <a href="https://amazon.com/" rel="noopener noreferrer" class="col-sm m-1" id="link10">
+                    <p id="linkText">Amazon</p>
+                </a>
+            </div>
+        </div>
     </body>
+
+    <script src="./scripts/main.js"></script>
+
 </html>
