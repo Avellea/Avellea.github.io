@@ -11,9 +11,6 @@ function displayDate() {
     let cYear = currentDate.getFullYear();
 
     let finalString = cMonth + " / " + cDay + " / " + cYear
-
-    console.log(finalString);
-
     document.getElementById('dateDisplay').innerHTML = finalString
 }
 

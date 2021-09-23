@@ -1,5 +1,17 @@
 window.onload = function() {
     this.initSearchBar()
+    this.displayDate()
+}
+
+function displayDate() {
+
+    let currentDate = new Date();
+    let cDay = currentDate.getDate();
+    let cMonth = currentDate.getMonth() + 1;
+    let cYear = currentDate.getFullYear();
+
+    let finalString = cMonth + " / " + cDay + " / " + cYear
+    document.getElementById('dateDisplay').innerHTML = finalString
 }
 
 function initSearchBar() {
