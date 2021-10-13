@@ -5,7 +5,11 @@ html {
     height: 100%;
     justify-content: center;
     margin: 0;
-    background-color: #212121;
+    /* background-color: #212121; */
+    background-image: url("../images/backgrounds/touhou2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     font: 22px "Courier New", Courier, monospace;
 }
 
@@ -22,7 +26,7 @@ body {
     display: flex;
     margin: 1em;
     padding: 1em;
-    background-color: #212121;
+    background-color: rgba(33, 33, 33, 0);
 }
 
 a {
@@ -36,7 +40,7 @@ a:focus, a:hover {
 
 input {
     height: inherit;
-    background: #2e2e2e;
+    background: rgb(18, 18, 18);
     color: #9e9e9e;
     font-weight: bold;
     line-height: 2em;
@@ -91,41 +95,41 @@ input:focus {
 }
 
 #link1 {
-    background-image: url('../images/links/link1.webp');
+    background-image: url('../images/links/touhou/link1.webp');
 }
 
 #link2 {
-    background-image: url('../images/links/link2.webp');
+    background-image: url('../images/links/touhou/link2.webp');
 }
 
 #link3 {
-    background-image: url('../images/links/link3.webp');
+    background-image: url('../images/links/touhou/link3.webp');
 }
 
 #link4 {
-    background-image: url('../images/links/link4.webp');
+    background-image: url('../images/links/touhou/link4.webp');
 }
 
 #link5 {
-    background-image: url('../images/links/link5.webp');
+    background-image: url('../images/links/touhou/link5.webp');
 }
 
 #link6 {
-    background-image: url('../images/links/link6.webp');
+    background-image: url('../images/links/touhou/link6.webp');
 }
 
 #link7 {
-    background-image: url('../images/links/link7.webp');
+    background-image: url('../images/links/touhou/link7.webp');
 }
 
 #link8 {
-    background-image: url('../images/links/link8.webp');
+    background-image: url('../images/links/touhou/link8.webp');
 }
 
 #link9 {
-    background-image: url('../images/links/link9.webp');
+    background-image: url('../images/links/touhou/link9.webp');
 }
 
 #link10 {
-    background-image: url('../images/links/link10.webp');
+    background-image: url('../images/links/touhou/link10.webp');
 }
