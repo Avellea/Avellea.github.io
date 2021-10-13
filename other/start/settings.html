@@ -1,0 +1,34 @@
+<!-- window.location.reload(true) -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Just a startpage..." />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>New tab settings</title>
+        <link rel="icon" type="image/png" href="../../img/favicon.png" />
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link id="pagestyle" rel="stylesheet" href="./styles/default.theme.css">
+    </head>
+    <body>
+        <div class="container-md">
+            <div class="row">
+                <h1>Startpage settings</h1>
+                <p id="dateDisplay">Reload your startpage browser tab<br>after selecting a theme.</p>
+            </div>
+            <br>
+            <div class="row">
+                <a href="#" onclick="setTheme('default')" rel="noopener noreferrer" class="col-sm m-1" id="link1">Default</a>
+                <a href="#" onclick="setTheme('sakura')" rel="noopener noreferrer" class="col-sm m-1" id="link1">Sakura</a>
+                <a href="#" onclick="setTheme('touhou')" rel="noopener noreferrer" class="col-sm m-1" id="link1">Touhou</a>
+                <a href="#" onclick="setTheme('vocaloid')" rel="noopener noreferrer" class="col-sm m-1" id="link1">Vocaloid</a>
+            </div>
+        </div>
+    </body>
+
+    <script src="./scripts/themeSettings.js"></script>
+
+</html>

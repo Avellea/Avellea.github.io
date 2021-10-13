@@ -6,7 +6,7 @@ html {
     justify-content: center;
     margin: 0;
     /* background-color: #212121; */
-    background-image: url("../images/backgrounds/touhou.jpg");
+    background-image: url("../images/backgrounds/vocaloid.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -95,41 +95,41 @@ input:focus {
 }
 
 #link1 {
-    background-image: url('../images/links/touhou/link1.webp');
+    background-image: url('../images/links/vocaloid/link1.webp');
 }
 
 #link2 {
-    background-image: url('../images/links/touhou/link2.webp');
+    background-image: url('../images/links/vocaloid/link2.webp');
 }
 
 #link3 {
-    background-image: url('../images/links/touhou/link3.webp');
+    background-image: url('../images/links/vocaloid/link3.webp');
 }
 
 #link4 {
-    background-image: url('../images/links/touhou/link4.webp');
+    background-image: url('../images/links/vocaloid/link4.webp');
 }
 
 #link5 {
-    background-image: url('../images/links/touhou/link5.webp');
+    background-image: url('../images/links/vocaloid/link5.webp');
 }
 
 #link6 {
-    background-image: url('../images/links/touhou/link6.webp');
+    background-image: url('../images/links/vocaloid/link6.webp');
 }
 
 #link7 {
-    background-image: url('../images/links/touhou/link7.webp');
+    background-image: url('../images/links/vocaloid/link7.webp');
 }
 
 #link8 {
-    background-image: url('../images/links/touhou/link8.webp');
+    background-image: url('../images/links/vocaloid/link8.webp');
 }
 
 #link9 {
-    background-image: url('../images/links/touhou/link9.webp');
+    background-image: url('../images/links/vocaloid/link9.webp');
 }
 
 #link10 {
-    background-image: url('../images/links/touhou/link10.webp');
+    background-image: url('../images/links/vocaloid/link10.webp');
 }
