@@ -133,3 +133,15 @@ input:focus {
 #link10 {
     background-image: url('../images/links/default/link1.webp');
 }
+
+#defaultPreview {
+    background-image: url('../images/previews/default.png');
+}
+
+#sakuraPreview {
+    background-image: url('../images/previews/sakura.jpg');
+}
+
+#touhouPreview {
+    background-image: url('../images/previews/touhou.png');
+}
