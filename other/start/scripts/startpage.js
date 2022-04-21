@@ -7,12 +7,12 @@ window.onload = function() {
 function swapStyleSheet() {
     var themeName = localStorage.getItem("theme")
 
-    if(themeName === null) {
-        console.warn("Theme is null, fallback...")
+    if(themeName != ("touhou" || "sakura"|| "vocaloid" || "default" ) || themeName === null) {
+        nekoLog("Theme is null, fallback to default.theme.css.", Style.warning)
         document.getElementById('pagestyle').setAttribute('href', './styles/default.theme.css')
     } else {
         document.getElementById('pagestyle').setAttribute('href', `./styles/${themeName}.theme.css`)
-        console.log("Setting theme to " + themeName)
+        nekoLog("Setting theme to " + themeName, Style.success)
     }
 
 }
