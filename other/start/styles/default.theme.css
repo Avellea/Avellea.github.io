@@ -145,3 +145,7 @@ input:focus {
 #touhouPreview {
     background-image: url('../images/previews/touhou.png');
 }
+
+#animePreview {
+    background-image: url('../images/previews/anime.png');
+}
