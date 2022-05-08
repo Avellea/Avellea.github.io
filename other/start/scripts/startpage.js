@@ -25,7 +25,7 @@ function swapStyleSheet() {
             nekoLog("Setting theme to default", Style.success)
             break;
         default:
-            document.getElementById('pagestyle').setAttribute('href', './styles/default.theme.css')
+            document.getElementById('pagestyle').setAttribute('href', './styles/anime.theme.css')
             nekoLog("themeName is null, fallback to default.theme.css.", Style.warning)
             break;
     }
