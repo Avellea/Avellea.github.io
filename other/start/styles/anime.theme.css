@@ -5,11 +5,12 @@ html {
     height: 100%;
     justify-content: center;
     margin: 0;
-    /* background-color: #212121; */
-    background-image: url("../images/backgrounds/vocaloid.jpg");
+    background-color: #212121;
+    /* background-image: url("../images/backgrounds/anime.jpg"); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    /* background-size: 100% 100%; */
     font: 22px "Courier New", Courier, monospace;
 }
 
@@ -95,41 +96,41 @@ input:focus {
 }
 
 #link1 {
-    background-image: url('../images/links/vocaloid/link1.webp');
+    background-image: url('../images/links/anime/link1.webp');
 }
 
 #link2 {
-    background-image: url('../images/links/vocaloid/link2.webp');
+    background-image: url('../images/links/anime/link2.webp');
 }
 
 #link3 {
-    background-image: url('../images/links/vocaloid/link3.webp');
+    background-image: url('../images/links/anime/link3.webp');
 }
 
 #link4 {
-    background-image: url('../images/links/vocaloid/link4.webp');
+    background-image: url('../images/links/anime/link4.webp');
 }
 
 #link5 {
-    background-image: url('../images/links/vocaloid/link5.webp');
+    background-image: url('../images/links/anime/link5.webp');
 }
 
 #link6 {
-    background-image: url('../images/links/vocaloid/link6.webp');
+    background-image: url('../images/links/anime/link6.webp');
 }
 
 #link7 {
-    background-image: url('../images/links/vocaloid/link7.webp');
+    background-image: url('../images/links/anime/link7.webp');
 }
 
 #link8 {
-    background-image: url('../images/links/vocaloid/link8.webp');
+    background-image: url('../images/links/anime/link8.webp');
 }
 
 #link9 {
-    background-image: url('../images/links/vocaloid/link9.webp');
+    background-image: url('../images/links/anime/link9.webp');
 }
 
 #link10 {
-    background-image: url('../images/links/vocaloid/link10.webp');
+    background-image: url('../images/links/anime/link10.webp');
 }
