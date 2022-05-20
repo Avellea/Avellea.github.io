@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/avellea
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://avellea.is-a.dev
+  * I am avellea (https://keybase.io/avellea) on keybase.
+  * I have a public key ASBpe-XnNu8KutPgUKUD0s0mRl_9ty62Q0Km1seUcifDtAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120697be5e736ef0abad3e050a503d2cd26465ffdb72eb64342a6d6c7947227c3b40a",
+      "host": "keybase.io",
+      "kid": "0120697be5e736ef0abad3e050a503d2cd26465ffdb72eb64342a6d6c7947227c3b40a",
+      "uid": "b706a02a6dae9c24fbb1977a3071ba19",
+      "username": "avellea"
+    },
+    "merkle_root": {
+      "ctime": 1653078635,
+      "hash": "e05349a1dccf1a02721fe4f7889e232112e08fd463b97fffe107fd412b22b41ef3a6bfdc30e3d4d5da83be52e649e14f82dd04ba094a2f506c9b2497dc60b1ba",
+      "hash_meta": "8a3899db5e34a261a6f0a7296e435500a56a90711f7829ac78914917f919143e",
+      "seqno": 22525569
+    },
+    "service": {
+      "entropy": "KnvsC9C201ztJfdwmnKlcRfZ",
+      "hostname": "avellea.is-a.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1653078638,
+  "expire_in": 504576000,
+  "prev": "ab0d37cd1bd13035e801eb95f969c859c779ce6b5676ace329882326b4f1314f",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgaXvl5zbvCrrT4FClA9LNJkZf/bcutkNCptbHlHInw7QKp3BheWxvYWTESpcCBsQgqw03zRvRMDXoAeuV+WnIWcd5zmtWdqzjKYgjJrTxMU/EIJ4NWqv/ieFZtkXG+aYB31TMru2VQNqJ5i2Yil0SFQGjAgHCo3NpZ8RAukMQ1j+RY711h3fEPZSmG6wxRbyc9G95MTZxxJrxF4IttQYNpS/vDBRhAtsOfGD7uRJ2pl2jjtdADYiR8SJvA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDUpw2wD1Kk4KHKdJfLrfsKOHM/1zjUs5iM3KcTQk6uFo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/avellea
+
+==================================================================
