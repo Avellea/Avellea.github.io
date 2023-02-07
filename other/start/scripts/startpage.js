@@ -50,7 +50,7 @@ function initSearchBar() {
     document.getElementById("search-bar-input").addEventListener("keypress", (event) => {
         if (event.key != 'Enter') return
 
-        ddgSearchUrl = "https://duckduckgo.com/?q="
+        ddgSearchUrl = "https://bing.com/?q="
         query = document.getElementById("search-bar-input").value.replace(/\ /g, "+")
         document.location = ddgSearchUrl + query
     })
