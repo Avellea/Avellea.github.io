@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html class="bg-neutral-900">
+<!-- <html class="bg-neutral-900"> -->
+<html class="bg-[url('./img/bkg.jpg')] bg-cover">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,21 @@
     </head>
     <body>
         <div class="h-screen flex flex-col items-center justify-center">
-            <h1 class="text-3xl font-bold text-white text-center mt-5">こんにちは！</h1>
-            <p id="dateDisplay" class="text-xl font-bold text-neutral-600 text-center mt-2"></p>
-            <input type="text" placeholder="Search..." id="search-bar-input" class="bg-neutral-800 text-neutral-200 rounded-lg text-center outline outline-offset-2 outline-purple-300 mt-5 pl-10 pr-10 pt-3 pb-3">
+            <h1 class="text-3xl font-bold text-white text-center md:filter-none ">こんにちは！</h1>
+            <p id="dateDisplay" class="text-xl font-bold text-neutral-400 text-center"></p>
+            <input type="search" placeholder="Search..." id="search-bar-input" class="bg-neutral-800 text-neutral-200 rounded-lg text-center outline outline-offset-2 outline-purple-300 mt-5 pl-10 pr-10 pt-3 pb-3">
         </div>
-        <div class="grid grid-cols-2 place-content-end">
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">XDA Developers</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">YouTube</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">4Chan</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">GitHub</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">GMail</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Jellyfin</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Reddit</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Anilist</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Local News</button>
-            <button class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Amazon</button>
-        </div>
+        <!-- <div class="grid grid-cols-2 place-content-end">
+            <button onclick="location.href='https://xda-developers.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">XDA Developers</button>
+            <button onclick="location.href='https://youtube.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">YouTube</button>
+            <button onclick="location.href='https://4chan.org'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">4Chan</button>
+            <button onclick="location.href='https://github.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">GitHub</button>
+            <button onclick="location.href='https://mail.google.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">GMail</button>
+            <button onclick="location.href='https://google.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Jellyfin</button>
+            <button onclick="location.href='https://reddit.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Reddit</button>
+            <button onclick="location.href='https://anilist.co'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Anilist</button>
+            <button onclick="location.href='https://fox2now.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Local News</button>
+            <button onclick="location.href='https://amazon.com'" class="bg-neutral-900 text-white rounded-lg pl-5 pt-5 pb-5 pr-5 outline outline-offset-2 outline-purple-300 mt-5 mb-5 mr-5 ml-5">Amazon</button>
+        </div> -->
     </body>
 </html>
