@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DreamJPG</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="text-center">DreamJPG</h1>
+            <p class="text-center">Convert Dreamcast DreamEye photos into viewable images</p>
+            <div class="mb-3">
+                <label for="fileInput" class="form-label">Upload Dreamcast DreamEye Photo</label>
+                <input type="file" class="form-control" id="fileInput" name="file" accept=".p00" required>
+            </div>
+            <button type="button" class="btn btn-primary text-center" onclick="convert();">Convert</button>
+            <div id="results" class="mt-4"></div>
+        </div>
+
+        <script src="/js/dream.js"></script>
+    </body>
+</html>
