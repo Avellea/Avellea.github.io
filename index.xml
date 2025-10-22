@@ -1,34 +1,310 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Home on Avellea</title>
-    <link>/</link>
-    <description>Recent content in Home on Avellea</description>
+    <title>Home | Avellea</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Home | Avellea</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 21 Oct 2023 21:07:42 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>© 2022-2025 Avellea</copyright>
+    <lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shironeko - Learning QMK</title>
+      <link>http://localhost:1313/shironeko/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/shironeko/</guid>
+      <description>&lt;h2 id=&#34;looks-like-a-whole-lot-of-letters&#34;&gt;Looks like a whole lot of letters&amp;hellip;&lt;/h2&gt;
+&lt;p&gt;Quantum Mechanical Keyboard (better known as QMK) is a sort of &amp;ldquo;abstraction&amp;rdquo; library for writing custom firmware for supported keyboards. The list of devices is too long to even list. For the purposes of writing, I will will be speaking only of the GMMK v2 unless otherwise specified.&lt;/p&gt;
+&lt;p&gt;With that out of the way, it&amp;rsquo;s basically a way to customize your keyboard beyond the manufacturer&amp;rsquo;s software. Custom RGB patterns and &amp;ldquo;programs&amp;rdquo;, key layouts, unicode support, even audio on supported models. There&amp;rsquo;s even examples of people playing the DOOM theme with a built-in speaker.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h2 id="looks-like-a-whole-lot-of-letters">Looks like a whole lot of letters&hellip;</h2>
+<p>Quantum Mechanical Keyboard (better known as QMK) is a sort of &ldquo;abstraction&rdquo; library for writing custom firmware for supported keyboards. The list of devices is too long to even list. For the purposes of writing, I will will be speaking only of the GMMK v2 unless otherwise specified.</p>
+<p>With that out of the way, it&rsquo;s basically a way to customize your keyboard beyond the manufacturer&rsquo;s software. Custom RGB patterns and &ldquo;programs&rdquo;, key layouts, unicode support, even audio on supported models. There&rsquo;s even examples of people playing the DOOM theme with a built-in speaker.</p>
+<h2 id="why-am-i-talking-about-this">Why am I talking about this?</h2>
+<p>I&rsquo;ve started trying to use it! As stated above, I use a GMMK v2 65% ANSI keyboard. It&rsquo;s quite compact and portable, with a nice heft to it. It feels fantastic to type on and will probably outlive me. I grew tired of the horrible Glorious CORE software. It was slow, buggy, liked to uninstall itself somehow, and was an all around horrible experience. I didn&rsquo;t use it all too often, but whenever I did, I found myself hating the experience.</p>
+<p>All of the negativity about Glorious CORE aside, I&rsquo;m grateful that the v2 was one of the three models that support. QMK (PRO/numpad being the other two.)</p>
+<h2 id="truly-a-learning-process">Truly a learning process&hellip;</h2>
+<p>There&rsquo;s been some hitches. I&rsquo;m using the &ldquo;external userspace&rdquo; method from the QMK documentation&hellip; The problem is that it doesn&rsquo;t support overlaying all of the files I modify. When pushing my firmware to GitHub, the final firmware binary file size is much larger than ones I build on my local machine. This is due to the fact that I cannot disable RGB effects during CI unless I fork the entire QMK codebase. As of writing, it ends up being about a 10KB difference in size.</p>
+<h2 id="shironeko">Shironeko?</h2>
+<p>I&rsquo;m very into a clean white aesthetic when it comes to electronics and computer hardware. My keyboard is the white model, it has white keycaps (Hatsune Miku accented), and light colored RGB unless indication of layer/caps is needed.</p>
+<p>I&rsquo;ve dubbed this keyboard &ldquo;Shironeko (白猫)&rdquo; or &ldquo;White Cat&rdquo;.</p>
+<p><img src="/images/shironeko/keyboard.jpg" alt="shironeko"></p>
+<p>White for obvious reasons. I derive the &ldquo;neko&rdquo; from how fast and lean I&rsquo;ve made the keyboard feel through firmware modification. N-key roll over, 1000hz polling rate, 2ms debounce, etc.</p>
+<p>You can find all of my code and modifications for <a href="https://github.com/Avellea/qmk_userspace/tree/main/keyboards/gmmk/gmmk2/p65/ansi/keymaps/shironeko">Shironeko here.</a> Most of the code will be found in <code>keymap.c</code>, with other minor configuration being found in <code>config.h</code> and <code>rules.mk</code>.</p>
+<h2 id="final-thoughts">Final thoughts</h2>
+<p>I&rsquo;ve got a new hobby now&hellip; I intend to take both the firmware and the hardware of this keyboard as far as I can. I might even get into building my own hardware and using QMK to control it.</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Dreameye</title>
-      <link>/post/2023/10/21/dreameye/</link>
-      <pubDate>Sat, 21 Oct 2023 21:07:42 -0500</pubDate>
-      
-      <guid>/post/2023/10/21/dreameye/</guid>
-      <description>What is the Dreameye? So I had no idea what this little device was before I was told about it from a friend. As it turns out, like the PS2, the Dreamcast also had an attachable webcam. Pictured below is a Dreameye, next to a PS2 EyeToy.
-Image credits: Tom Charnock1
-It was released to the Japanese market exclusively, with software called Visual Park.
-So what about the weird file format?</description>
+      <link>http://localhost:1313/dreameye/</link>
+      <pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/dreameye/</guid>
+      <description>&lt;h2 id=&#34;what-is-the-dreameye&#34;&gt;What is the Dreameye?&lt;/h2&gt;
+&lt;p&gt;So I had no idea what this little device was before I was told about it from a friend. As it turns out, like the PlayStation 2, the Dreamcast also had an attachable web-cam. Pictured below is a Dreameye, next to a PlayStation 2 EyeToy.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/dreameye/eyetoy-dreameye.png&#34; alt=&#34;eyetoy-dreameye&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Image Credits: Tom Charnock&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;so-what-about-the-weird-file-format&#34;&gt;So what about the weird file format?&lt;/h2&gt;
+&lt;p&gt;Right. Since the Dreameye is also a standalone digital camera, it has internal storage. Getting the image off of that is fairly easy, as it can be copied to the VMU. In doing so, one can copy it to an SD to serial adapter and dump it right onto a PC for viewing… Or so we thought. Turns out regular tools like IrfanView can’t open it. The file has a large, and strange header shown in the link below. I won’t post the whole thing, as its 1480 lines long. I will post the most interesting part of it though.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<h2 id="what-is-the-dreameye">What is the Dreameye?</h2>
+<p>So I had no idea what this little device was before I was told about it from a friend. As it turns out, like the PlayStation 2, the Dreamcast also had an attachable web-cam. Pictured below is a Dreameye, next to a PlayStation 2 EyeToy.</p>
+<p><img src="/images/dreameye/eyetoy-dreameye.png" alt="eyetoy-dreameye"></p>
+<p>Image Credits: Tom Charnock<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="so-what-about-the-weird-file-format">So what about the weird file format?</h2>
+<p>Right. Since the Dreameye is also a standalone digital camera, it has internal storage. Getting the image off of that is fairly easy, as it can be copied to the VMU. In doing so, one can copy it to an SD to serial adapter and dump it right onto a PC for viewing… Or so we thought. Turns out regular tools like IrfanView can’t open it. The file has a large, and strange header shown in the link below. I won’t post the whole thing, as its 1480 lines long. I will post the most interesting part of it though.</p>
+
+
+
+
+
+
+<pre tabindex="0"><code>50 68 6F 74 6F 46 75 6E | 20 50 69 63 74 75 72 65 |PhotoFun Picture|
+50 69 63 74 75 72 65 49 | 51 20 43 6F 72 70 6F 72 |PictureIQ Corpor|
+61 74 69 6F 6E 20 20 20 | 20 20 20 20 20 20 20 20 |ation           |</code></pre>
+<p>After a little bit of searching, I ultimately came up with nothing. I found a few companies by the name of PictureIQ, but they were surely unrelated to this. I had scrolled through the rest of the file, and didn’t see anything interesting. It was at this point I put this on the backburner, thinking “This isn’t very useful, so I won’t take much time looking into it.”</p>
+<p>That being said, about 5 minutes after thinking that, someone else within my circle managed to find the following at 0x1480</p>
+
+
+
+
+
+
+<pre tabindex="0"><code>FF D8 FF E0 00 10 4A 46 | 49 46 00 01 01 00 00 01 |     JFIF     |</code></pre>
+<p>That’s just a regular old JPEG header…?</p>
+<p><img src="/images/dreameye/paddel.png" alt="paddel"></p>
+<p>paddel06 on Discord found that, after I completely overlooked it. He thought “Okay, it’s probably just a container, let’s delete from 0x0000 to 0x1480 and see what happens.” Lo and behold, it worked. We can now view Dreameye images on virtually any device with an image viewer.</p>
+<h2 id="how-about-code">How about code?</h2>
+<p>Yup. There’s code. Knowing what we do now, I went ahead and wrote a Python script that can do this all automatically (and possibly in batches? I haven’t tested that.) It’s a simple script that simply opens the file using pythons io package, deletes all data between the two addresses, then copies the file and appends .jpg to the end.</p>
+<p>If you want to use this for yourself, you can find it here. <a href="https://github.com/Avellea/DreamJPG">DreamJPG</a>. It’s ugly, probably slow, but it works. I may update it over time.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>While I was writing this post, I got a message saying “How about videos?” That’s what’s next. Right now all we know is video/apcstream.</p>
+<p>I’ll make a post about that as things develop. Hope you enjoyed this first little writeup!</p>
+<h2 id="sources">Sources</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.youtube.com/watch?v=vhHQ5TEUOUM">Tom Charnock</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+]]></content:encoded>
     </item>
-    
     <item>
-      <title>First post</title>
-      <link>/post/2022/05/23/first-post/</link>
-      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2022/05/23/first-post/</guid>
-      <description>Introduction I&amp;rsquo;m a pretty boring guy, so I thought I&amp;rsquo;d make a post about myself just to get that out of the way.
-Development career To start off, I do all of the development work for the Twitch VTuber KazukiVT.1 Right now they are running a proprietary panel for their stream. It will be open-sourced eventually, but I&amp;rsquo;m not sure when.
-I also do some web development on the side, though that&amp;rsquo;s pretty rare.</description>
+      <title>Markdown Syntax Guide</title>
+      <link>http://localhost:1313/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.</p>
+<h2 id="headings">Headings</h2>
+<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="h1">H1</h1>
+<h2 id="h2">H2</h2>
+<h3 id="h3">H3</h3>
+<h4 id="h4">H4</h4>
+<h5 id="h5">H5</h5>
+<h6 id="h6">H6</h6>
+<h2 id="paragraph">Paragraph</h2>
+<p>Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.</p>
+<p>Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.</p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
+<h3 id="blockquote-without-attribution">Blockquote without attribution</h3>
+<blockquote>
+<p>Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p>
+</blockquote>
+<h3 id="blockquote-with-attribution">Blockquote with attribution</h3>
+<blockquote>
+<p>Don&rsquo;t communicate by sharing memory, share memory by communicating.<br>
+— <cite>Rob Pike<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p>
+</blockquote>
+<h2 id="tables">Tables</h2>
+<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Age</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bob</td>
+          <td>27</td>
+      </tr>
+      <tr>
+          <td>Alice</td>
+          <td>23</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="inline-markdown-within-tables">Inline Markdown within tables</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Italics</th>
+          <th>Bold</th>
+          <th>Code</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><em>italics</em></td>
+          <td><strong>bold</strong></td>
+          <td><code>code</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="code-blocks">Code Blocks</h2>
+<h3 id="code-block-with-backticks">Code block with backticks</h3>
+
+
+
+
+
+
+<div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 1</span><span><span style="color:#6c7086;font-style:italic">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 2</span><span>&lt;<span style="color:#cba6f7">html</span> <span style="color:#89b4fa">lang</span><span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 3</span><span>&lt;<span style="color:#cba6f7">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 4</span><span>  &lt;<span style="color:#cba6f7">meta</span> <span style="color:#89b4fa">charset</span><span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 5</span><span>  &lt;<span style="color:#cba6f7">title</span>&gt;Example HTML5 Document&lt;/<span style="color:#cba6f7">title</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 6</span><span>&lt;/<span style="color:#cba6f7">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 7</span><span>&lt;<span style="color:#cba6f7">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 8</span><span>  &lt;<span style="color:#cba6f7">p</span>&gt;Test&lt;/<span style="color:#cba6f7">p</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 9</span><span>&lt;/<span style="color:#cba6f7">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c">10</span><span>&lt;/<span style="color:#cba6f7">html</span>&gt;</span></span></code></pre></div>
+<h3 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h3>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h3>
+
+
+
+
+
+
+  <div class="highlight"><pre tabindex="0" style="color:#cdd6f4;background-color:#1e1e2e;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 1</span><span><span style="color:#6c7086;font-style:italic">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 2</span><span>&lt;<span style="color:#cba6f7">html</span> <span style="color:#89b4fa">lang</span><span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 3</span><span>&lt;<span style="color:#cba6f7">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 4</span><span>  &lt;<span style="color:#cba6f7">meta</span> <span style="color:#89b4fa">charset</span><span style="color:#89dceb;font-weight:bold">=</span><span style="color:#a6e3a1">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 5</span><span>  &lt;<span style="color:#cba6f7">title</span>&gt;Example HTML5 Document&lt;/<span style="color:#cba6f7">title</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 6</span><span>&lt;/<span style="color:#cba6f7">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 7</span><span>&lt;<span style="color:#cba6f7">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 8</span><span>  &lt;<span style="color:#cba6f7">p</span>&gt;Test&lt;/<span style="color:#cba6f7">p</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c"> 9</span><span>&lt;/<span style="color:#cba6f7">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f849c">10</span><span>&lt;/<span style="color:#cba6f7">html</span>&gt;</span></span></code></pre></div>
+
+
+<h2 id="list-types">List Types</h2>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h3 id="nested-list">Nested list</h3>
+<ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Dairy
+<ul>
+<li>Milk</li>
+<li>Cheese</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h2>
+<p><abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.</p>
+<p>H<sub>2</sub>O</p>
+<p>X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup></p>
+<p>Press <kbd>CTRL+ALT+Delete</kbd> to end the session.</p>
+<p>Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>]]></content:encoded>
     </item>
-    
+    <item>
+      <title>Rich Content</title>
+      <link>http://localhost:1313/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/rich-content/</guid>
+      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Hugo ships with several <a href="https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes">Built-in Shortcodes</a> for rich content, along with a <a href="https://gohugo.io/about/hugo-and-gdpr/">Privacy Config</a> and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.</p>
+<hr>
+<h2 id="youtube-privacy-enhanced-shortcode">YouTube Privacy Enhanced Shortcode</h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZJthWmvUzzc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<br>
+<hr>
+<h2 id="twitter-simple-shortcode">Twitter Simple Shortcode</h2>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">“In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”<br>— Jan Tschichold <a href="https://t.co/gcv7SrhvJb">pic.twitter.com/gcv7SrhvJb</a></p>&mdash; Design Reviewed | Graphic Design History (@DesignReviewed) <a href="https://twitter.com/DesignReviewed/status/1085870671291310081?ref_src=twsrc%5Etfw">January 17, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<br>
+<hr>
+<h2 id="vimeo-simple-shortcode">Vimeo Simple Shortcode</h2>
+<style>
+.__h_video {
+   position: relative;
+   padding-bottom: 56.23%;
+   height: 0;
+   overflow: hidden;
+   width: 100%;
+   background: #000;
+}
+.__h_video img {
+   width: 100%;
+   height: auto;
+   color: #000;
+}
+.__h_video .play {
+   height: 72px;
+   width: 72px;
+   left: 50%;
+   top: 50%;
+   margin-left: -36px;
+   margin-top: -36px;
+   position: absolute;
+   cursor: pointer;
+}
+</style><div class="s_video_simple __h_video">
+          <a href="https://vimeo.com/48912912" rel="noopener" target="_blank">
+            <img src="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640?region=us" srcset="https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640?region=us 1x, https://i.vimeocdn.com/video/337401969-979f0cc9f55fdf305fb8984e90d92639ec9d7ecc4c9dfbc6536e28edb43784ce-d_640?region=us 2x" alt="Sing Jan Swing - Kinetic Type">
+            <div class="play">
+              <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61"><circle cx="30.5" cy="30.5" r="30.5" opacity=".8" fill="#000"></circle><path d="M25.3 19.2c-2.1-1.2-3.8-.2-3.8 2.2v18.1c0 2.4 1.7 3.4 3.8 2.2l16.6-9.1c2.1-1.2 2.1-3.2 0-4.4l-16.6-9z" fill="#fff"></path></svg>
+            </div>
+          </a>
+        </div>]]></content:encoded>
+    </item>
   </channel>
 </rss>

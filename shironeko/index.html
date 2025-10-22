@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/images/favicon.png" />
+
+<title>Shironeko - Learning QMK&nbsp;|&nbsp;Home | Avellea</title>
+<meta
+  name="title"
+  content="Shironeko - Learning QMK"
+/>
+<meta
+  name="description"
+  content="I had no clue keyboards went so deep!"
+/>
+<meta
+  name="keywords"
+  content="hardware,keyboards,qmk,"
+/>
+
+  <meta name="author" content="Avellea" />
+
+
+
+
+<meta property="og:url" content="http://localhost:1313/shironeko/">
+  <meta property="og:site_name" content="Home | Avellea">
+  <meta property="og:title" content="Shironeko - Learning QMK">
+  <meta property="og:description" content="I had no clue keyboards went so deep!">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-10-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-20T00:00:00+00:00">
+    <meta property="article:tag" content="hardware">
+    <meta property="article:tag" content="keyboards">
+    <meta property="article:tag" content="qmk">
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Shironeko - Learning QMK">
+  <meta name="twitter:description" content="I had no clue keyboards went so deep!">
+
+
+
+
+
+  <meta itemprop="name" content="Shironeko - Learning QMK">
+  <meta itemprop="description" content="I had no clue keyboards went so deep!">
+  <meta itemprop="datePublished" content="2025-10-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-10-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="453">
+  <meta itemprop="keywords" content="hardware,keyboards,qmk">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+    
+    
+    
+    <link href="/bundle.min.css" rel="stylesheet" />
+
+    
+
+    
+
+
+    
+</head>
+
+  <body>
+    <header>
+      <nav>
+  <a
+    href="/"
+    
+    >Home</a
+  >
+
+  <a
+    href="/blog/"
+    
+    >Blog</a
+  >
+
+
+  <a href="/index.xml">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512">
+      
+      <path
+        d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+      />
+    </svg>
+    RSS
+  </a>
+
+</nav>
+    <h1>Shironeko - Learning QMK</h1>
+
+  <p>I had no clue keyboards went so deep!</p>
+
+
+    </header>
+    <main>
+      
+  
+  
+    
+      <p>
+        <i>
+          <time
+            style="color: var(--text-light);"
+            datetime="2025-10-20"
+            pubdate
+          >
+            2025-10-20
+          </time>
+        </i>
+      </p>
+    
+  
+  
+    <details>
+      <summary>Table of Contents</summary>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#looks-like-a-whole-lot-of-letters">Looks like a whole lot of letters&hellip;</a></li>
+    <li><a href="#why-am-i-talking-about-this">Why am I talking about this?</a></li>
+    <li><a href="#truly-a-learning-process">Truly a learning process&hellip;</a></li>
+    <li><a href="#shironeko">Shironeko?</a></li>
+    <li><a href="#final-thoughts">Final thoughts</a></li>
+  </ul>
+</nav>
+    </details>
+  
+  <content>
+    <h2 id="looks-like-a-whole-lot-of-letters">Looks like a whole lot of letters&hellip;</h2>
+<p>Quantum Mechanical Keyboard (better known as QMK) is a sort of &ldquo;abstraction&rdquo; library for writing custom firmware for supported keyboards. The list of devices is too long to even list. For the purposes of writing, I will will be speaking only of the GMMK v2 unless otherwise specified.</p>
+<p>With that out of the way, it&rsquo;s basically a way to customize your keyboard beyond the manufacturer&rsquo;s software. Custom RGB patterns and &ldquo;programs&rdquo;, key layouts, unicode support, even audio on supported models. There&rsquo;s even examples of people playing the DOOM theme with a built-in speaker.</p>
+<h2 id="why-am-i-talking-about-this">Why am I talking about this?</h2>
+<p>I&rsquo;ve started trying to use it! As stated above, I use a GMMK v2 65% ANSI keyboard. It&rsquo;s quite compact and portable, with a nice heft to it. It feels fantastic to type on and will probably outlive me. I grew tired of the horrible Glorious CORE software. It was slow, buggy, liked to uninstall itself somehow, and was an all around horrible experience. I didn&rsquo;t use it all too often, but whenever I did, I found myself hating the experience.</p>
+<p>All of the negativity about Glorious CORE aside, I&rsquo;m grateful that the v2 was one of the three models that support. QMK (PRO/numpad being the other two.)</p>
+<h2 id="truly-a-learning-process">Truly a learning process&hellip;</h2>
+<p>There&rsquo;s been some hitches. I&rsquo;m using the &ldquo;external userspace&rdquo; method from the QMK documentation&hellip; The problem is that it doesn&rsquo;t support overlaying all of the files I modify. When pushing my firmware to GitHub, the final firmware binary file size is much larger than ones I build on my local machine. This is due to the fact that I cannot disable RGB effects during CI unless I fork the entire QMK codebase. As of writing, it ends up being about a 10KB difference in size.</p>
+<h2 id="shironeko">Shironeko?</h2>
+<p>I&rsquo;m very into a clean white aesthetic when it comes to electronics and computer hardware. My keyboard is the white model, it has white keycaps (Hatsune Miku accented), and light colored RGB unless indication of layer/caps is needed.</p>
+<p>I&rsquo;ve dubbed this keyboard &ldquo;Shironeko (白猫)&rdquo; or &ldquo;White Cat&rdquo;.</p>
+<p><img src="/images/shironeko/keyboard.jpg" alt="shironeko"></p>
+<p>White for obvious reasons. I derive the &ldquo;neko&rdquo; from how fast and lean I&rsquo;ve made the keyboard feel through firmware modification. N-key roll over, 1000hz polling rate, 2ms debounce, etc.</p>
+<p>You can find all of my code and modifications for <a href="https://github.com/Avellea/qmk_userspace/tree/main/keyboards/gmmk/gmmk2/p65/ansi/keymaps/shironeko">Shironeko here.</a> Most of the code will be found in <code>keymap.c</code>, with other minor configuration being found in <code>config.h</code> and <code>rules.mk</code>.</p>
+<h2 id="final-thoughts">Final thoughts</h2>
+<p>I&rsquo;ve got a new hobby now&hellip; I intend to take both the firmware and the hardware of this keyboard as far as I can. I might even get into building my own hardware and using QMK to control it.</p>
+
+  </content>
+  
+    
+    
+      <p>
+        
+          <a href="/blog/hardware/">#hardware</a>&nbsp;&nbsp;
+        
+          <a href="/blog/keyboards/">#keyboards</a>&nbsp;&nbsp;
+        
+          <a href="/blog/qmk/">#qmk</a>&nbsp;&nbsp;
+        
+      </p>
+    
+    
+    
+      <div class="flex-between" style="margin-top: 3rem;">
+        
+          <a href="/dreameye/" rel="prev" aria-label="Previous post: Dreameye">
+            <span>←</span>
+            <span>Dreameye</span>
+          </a>
+        
+        
+      </div>
+    
+  
+
+    </main>
+    <footer>
+      
+
+      
+  <span>© 2022-2025 Avellea</span>
+
+
+  <span>
+    |
+    Made with
+    <a href="https://github.com/maolonglong/hugo-simple/">Hugo ʕ•ᴥ•ʔ Simple</a>
+  </span>
+
+
+    </footer>
+
+    
+</body>
+</html>

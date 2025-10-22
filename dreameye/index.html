@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/images/favicon.png" />
+
+<title>Dreameye&nbsp;|&nbsp;Home | Avellea</title>
+<meta
+  name="title"
+  content="Dreameye"
+/>
+<meta
+  name="description"
+  content="An accessory for the Dreamcast to save your favorite memories."
+/>
+<meta
+  name="keywords"
+  content="dreamcast,reverse engineering,"
+/>
+
+  <meta name="author" content="Avellea" />
+
+
+
+
+<meta property="og:url" content="http://localhost:1313/dreameye/">
+  <meta property="og:site_name" content="Home | Avellea">
+  <meta property="og:title" content="Dreameye">
+  <meta property="og:description" content="An accessory for the Dreamcast to save your favorite memories.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-10-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-10-21T00:00:00+00:00">
+    <meta property="article:tag" content="dreamcast">
+    <meta property="article:tag" content="reverse engineering">
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dreameye">
+  <meta name="twitter:description" content="An accessory for the Dreamcast to save your favorite memories.">
+
+
+
+
+
+  <meta itemprop="name" content="Dreameye">
+  <meta itemprop="description" content="An accessory for the Dreamcast to save your favorite memories.">
+  <meta itemprop="datePublished" content="2023-10-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-10-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="515">
+  <meta itemprop="keywords" content="dreamcast,reverse engineering">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+    
+    
+    
+    <link href="/bundle.min.css" rel="stylesheet" />
+
+    
+
+    
+
+
+    
+</head>
+
+  <body>
+    <header>
+      <nav>
+  <a
+    href="/"
+    
+    >Home</a
+  >
+
+  <a
+    href="/blog/"
+    
+    >Blog</a
+  >
+
+
+  <a href="/index.xml">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 448 512">
+      
+      <path
+        d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"
+      />
+    </svg>
+    RSS
+  </a>
+
+</nav>
+    <h1>Dreameye</h1>
+
+  <p>An accessory for the Dreamcast to save your favorite memories.</p>
+
+
+    </header>
+    <main>
+      
+  
+  
+    
+      <p>
+        <i>
+          <time
+            style="color: var(--text-light);"
+            datetime="2023-10-21"
+            pubdate
+          >
+            2023-10-21
+          </time>
+        </i>
+      </p>
+    
+  
+  
+    <details>
+      <summary>Table of Contents</summary>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-the-dreameye">What is the Dreameye?</a></li>
+    <li><a href="#so-what-about-the-weird-file-format">So what about the weird file format?</a></li>
+    <li><a href="#how-about-code">How about code?</a></li>
+    <li><a href="#whats-next">What&rsquo;s next?</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ul>
+</nav>
+    </details>
+  
+  <content>
+    <h2 id="what-is-the-dreameye">What is the Dreameye?</h2>
+<p>So I had no idea what this little device was before I was told about it from a friend. As it turns out, like the PlayStation 2, the Dreamcast also had an attachable web-cam. Pictured below is a Dreameye, next to a PlayStation 2 EyeToy.</p>
+<p><img src="/images/dreameye/eyetoy-dreameye.png" alt="eyetoy-dreameye"></p>
+<p>Image Credits: Tom Charnock<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="so-what-about-the-weird-file-format">So what about the weird file format?</h2>
+<p>Right. Since the Dreameye is also a standalone digital camera, it has internal storage. Getting the image off of that is fairly easy, as it can be copied to the VMU. In doing so, one can copy it to an SD to serial adapter and dump it right onto a PC for viewing… Or so we thought. Turns out regular tools like IrfanView can’t open it. The file has a large, and strange header shown in the link below. I won’t post the whole thing, as its 1480 lines long. I will post the most interesting part of it though.</p>
+
+
+
+
+
+
+<pre tabindex="0"><code>50 68 6F 74 6F 46 75 6E | 20 50 69 63 74 75 72 65 |PhotoFun Picture|
+50 69 63 74 75 72 65 49 | 51 20 43 6F 72 70 6F 72 |PictureIQ Corpor|
+61 74 69 6F 6E 20 20 20 | 20 20 20 20 20 20 20 20 |ation           |</code></pre>
+<p>After a little bit of searching, I ultimately came up with nothing. I found a few companies by the name of PictureIQ, but they were surely unrelated to this. I had scrolled through the rest of the file, and didn’t see anything interesting. It was at this point I put this on the backburner, thinking “This isn’t very useful, so I won’t take much time looking into it.”</p>
+<p>That being said, about 5 minutes after thinking that, someone else within my circle managed to find the following at 0x1480</p>
+
+
+
+
+
+
+<pre tabindex="0"><code>FF D8 FF E0 00 10 4A 46 | 49 46 00 01 01 00 00 01 |     JFIF     |</code></pre>
+<p>That’s just a regular old JPEG header…?</p>
+<p><img src="/images/dreameye/paddel.png" alt="paddel"></p>
+<p>paddel06 on Discord found that, after I completely overlooked it. He thought “Okay, it’s probably just a container, let’s delete from 0x0000 to 0x1480 and see what happens.” Lo and behold, it worked. We can now view Dreameye images on virtually any device with an image viewer.</p>
+<h2 id="how-about-code">How about code?</h2>
+<p>Yup. There’s code. Knowing what we do now, I went ahead and wrote a Python script that can do this all automatically (and possibly in batches? I haven’t tested that.) It’s a simple script that simply opens the file using pythons io package, deletes all data between the two addresses, then copies the file and appends .jpg to the end.</p>
+<p>If you want to use this for yourself, you can find it here. <a href="https://github.com/Avellea/DreamJPG">DreamJPG</a>. It’s ugly, probably slow, but it works. I may update it over time.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>While I was writing this post, I got a message saying “How about videos?” That’s what’s next. Right now all we know is video/apcstream.</p>
+<p>I’ll make a post about that as things develop. Hope you enjoyed this first little writeup!</p>
+<h2 id="sources">Sources</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.youtube.com/watch?v=vhHQ5TEUOUM">Tom Charnock</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+  </content>
+  
+    
+    
+      <p>
+        
+          <a href="/blog/dreamcast/">#dreamcast</a>&nbsp;&nbsp;
+        
+          <a href="/blog/reverse-engineering/">#reverse engineering</a>&nbsp;&nbsp;
+        
+      </p>
+    
+    
+    
+      <div class="flex-between" style="margin-top: 3rem;">
+        
+          <a href="/markdown-syntax/" rel="prev" aria-label="Previous post: Markdown Syntax Guide">
+            <span>←</span>
+            <span>Markdown Syntax Guide</span>
+          </a>
+        
+        
+          <a href="/shironeko/" rel="next" aria-label="Next post: Shironeko - Learning QMK">
+            <span>Shironeko - Learning QMK</span>
+            <span>→</span>
+          </a>
+        
+      </div>
+    
+  
+
+    </main>
+    <footer>
+      
+
+      
+  <span>© 2022-2025 Avellea</span>
+
+
+  <span>
+    |
+    Made with
+    <a href="https://github.com/maolonglong/hugo-simple/">Hugo ʕ•ᴥ•ʔ Simple</a>
+  </span>
+
+
+    </footer>
+
+    
+</body>
+</html>
